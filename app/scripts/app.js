@@ -33,8 +33,28 @@ angular.module('capstoneSBSApp', ['ui.router','ngResource','ngDialog'])
                     }
                 }
             })
-        
-            // route for the contactus page
+        // route for the inspirationalQuote page
+            .state('app.inspirationalQuoteHome', {
+                url:'inspirationalQuoteHome',
+                views: {
+                    'content@': {
+                        templateUrl : 'views/inspirationalQuoteHome.html',
+                        controller  : 'InspirationalQuoteController'                  
+                    }
+                }
+            })
+            
+        // route for the milkSupply page
+            .state('app.milkSupplyHome', {
+                url:'milkSupplyHome',
+                views: {
+                    'content@': {
+                        templateUrl : 'views/milkSupplyHome.html',
+                        controller  : 'MilkSupplyController'                  
+                    }
+                }
+            })
+        // route for the contactus page
             .state('app.contactus', {
                 url:'contactus',
                 views: {
