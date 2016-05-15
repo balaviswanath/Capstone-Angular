@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('conaaafusionApp', ['ui.router','ngResource','ngDialog'])
+angular.module('capstoneSBSApp', ['ui.router','ngResource','ngDialog'])
 .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
         
@@ -43,40 +43,9 @@ angular.module('conaaafusionApp', ['ui.router','ngResource','ngDialog'])
                         controller  : 'ContactController'                  
                     }
                 }
-            })
-
-            // route for the menu page
-            .state('app.menu', {
-                url: 'menu',
-                views: {
-                    'content@': {
-                        templateUrl : 'views/menu.html',
-                        controller  : 'MenuController'
-                    }
-                }
-            })
-
-            // route for the dishdetail page
-            .state('app.dishdetails', {
-                url: 'menu/:id',
-                views: {
-                    'content@': {
-                        templateUrl : 'views/dishdetail.html',
-                        controller  : 'DishDetailController'
-                   }
-                }
-            })
-        
-            // route for the dishdetail page
-            .state('app.favorites', {
-                url: 'favorites',
-                views: {
-                    'content@': {
-                        templateUrl : 'views/favorites.html',
-                        controller  : 'FavoriteController'
-                   }
-                }
             });
+
+            
     
         $urlRouterProvider.otherwise('/');
     })
